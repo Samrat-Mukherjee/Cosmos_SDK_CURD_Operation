@@ -4,9 +4,11 @@ import (
 	"context"
 	"fmt"
 
-	"blog/x/blog/types"
-
+	errorsmod "cosmossdk.io/errors"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
+
+	"blog/x/blog/types"
 )
 
 func (k msgServer) UpdatePost(goCtx context.Context, msg *types.MsgUpdatePost) (*types.MsgUpdatePostResponse, error) {
